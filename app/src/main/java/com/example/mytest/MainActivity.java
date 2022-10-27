@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Request request = new Request.Builder()
                         .url("http://10.20.1.246:9091/content/")
+                        .addHeader("token","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMyIsImV4cCI6MTY2Njg4MzYzMn0.nCXGVWunmjuf3MZJLCd3myhrCyWkiX32xFsSG8HEgko")
                         .get()
                         .build();
                 client.newCall(request).enqueue(new Callback() {

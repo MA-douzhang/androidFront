@@ -37,6 +37,7 @@ public class ContentService extends AppCompatActivity {
                 RequestBody requestBody = new FormBody.Builder().add("title",title).add("content",content).build();
                 Request request = new Request.Builder()
                         .url("http://10.20.1.246:9091/content/save")
+
                         .post(requestBody)
                         .build();
                 client.newCall(request).enqueue(new Callback() {
